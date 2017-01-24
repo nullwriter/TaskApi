@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Models\Traits\Relationship;
+
+use App\User;
+use App\Models\Priority;
+
+trait TaskRelationship
+{
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function priority(){
+        return $this->belongsTo(Priority::class);
+    }
+}
